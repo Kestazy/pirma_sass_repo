@@ -1,0 +1,16 @@
+@import 'mixing', 'var';
+
+.container{
+    @include flexcenter();
+    flex-wrap: wrap;
+    img{
+        width: 450px;
+        margin: 10px;
+        border-radius: $borderForIMG;
+        @include filter(50%);
+        &:hover{
+            @include filter(100%);
+            width: 600px;
+        }
+    }
+}
